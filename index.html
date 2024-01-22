@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bundle.css" />
-    <title>Title</title>
+    <title>Distributed music</title>
   </head>
   <body>
     <div id="app"></div>
@@ -14,57 +14,149 @@
       // preview. Defaults, documentation, and additional settings can be found in src/config.js.
       const config = {
   "LOCAL_SESSION_ID_PREFIX": "audio-orchestrator",
-  "INITIAL_CONTENT_ID": "865fe7d3-4730-43af-8fc7-62955ec3b718",
+  "INITIAL_CONTENT_ID": "479334e3-7ffa-4857-b60a-ee6d1bac103d",
   "SEQUENCE_URLS": [
     {
-      "name": "Initial sequence",
-      "contentId": "865fe7d3-4730-43af-8fc7-62955ec3b718",
-      "url": "audio/865fe7d3-4730-43af-8fc7-62955ec3b718/sequence.json",
+      "name": "Ambient",
+      "contentId": "479334e3-7ffa-4857-b60a-ee6d1bac103d",
+      "url": "audio/479334e3-7ffa-4857-b60a-ee6d1bac103d/sequence.json",
       "hold": true,
-      "skippable": false,
+      "skippable": true,
       "instructions": false,
       "next": [
         {
-          "contentId": "865fe7d3-4730-43af-8fc7-62955ec3b718",
+          "contentId": "479334e3-7ffa-4857-b60a-ee6d1bac103d",
           "label": "Listen again"
+        },
+        {
+          "contentId": "5fc53ac2-bb76-4b41-ad2e-d1ce4ede9567",
+          "label": "Ambient setup 2"
+        },
+        {
+          "contentId": "594b178b-90bb-405e-a96c-e0bb7b9c7455",
+          "label": "Spacey groove"
+        },
+        {
+          "contentId": "b585ccd6-591e-41ba-9001-25b140fea8de",
+          "label": "PKG - Children"
+        }
+      ]
+    },
+    {
+      "name": "Ambient setup2",
+      "contentId": "5fc53ac2-bb76-4b41-ad2e-d1ce4ede9567",
+      "url": "audio/5fc53ac2-bb76-4b41-ad2e-d1ce4ede9567/sequence.json",
+      "hold": true,
+      "skippable": true,
+      "instructions": false,
+      "next": [
+        {
+          "contentId": "5fc53ac2-bb76-4b41-ad2e-d1ce4ede9567",
+          "label": "Listen again"
+        },
+        {
+          "contentId": "479334e3-7ffa-4857-b60a-ee6d1bac103d",
+          "label": "Ambient"
+        },
+        {
+          "contentId": "594b178b-90bb-405e-a96c-e0bb7b9c7455",
+          "label": "Spacey groove"
+        },
+        {
+          "contentId": "b585ccd6-591e-41ba-9001-25b140fea8de",
+          "label": "PKG - Children"
+        }
+      ]
+    },
+    {
+      "name": "Spacey groove",
+      "contentId": "594b178b-90bb-405e-a96c-e0bb7b9c7455",
+      "url": "audio/594b178b-90bb-405e-a96c-e0bb7b9c7455/sequence.json",
+      "hold": true,
+      "skippable": true,
+      "instructions": false,
+      "next": [
+        {
+          "contentId": "594b178b-90bb-405e-a96c-e0bb7b9c7455",
+          "label": "Listen again"
+        },
+        {
+          "contentId": "479334e3-7ffa-4857-b60a-ee6d1bac103d",
+          "label": "Ambient"
+        },
+        {
+          "contentId": "5fc53ac2-bb76-4b41-ad2e-d1ce4ede9567",
+          "label": "Ambient setup 2"
+        },
+        {
+          "contentId": "b585ccd6-591e-41ba-9001-25b140fea8de",
+          "label": "PKG - Children"
+        }
+      ]
+    },
+    {
+      "name": "PKG - Children",
+      "contentId": "b585ccd6-591e-41ba-9001-25b140fea8de",
+      "url": "audio/b585ccd6-591e-41ba-9001-25b140fea8de/sequence.json",
+      "hold": true,
+      "skippable": true,
+      "instructions": false,
+      "next": [
+        {
+          "contentId": "b585ccd6-591e-41ba-9001-25b140fea8de",
+          "label": "Listen again"
+        },
+        {
+          "contentId": "479334e3-7ffa-4857-b60a-ee6d1bac103d",
+          "label": "Ambient"
+        },
+        {
+          "contentId": "5fc53ac2-bb76-4b41-ad2e-d1ce4ede9567",
+          "label": "Ambient setup 2"
+        },
+        {
+          "contentId": "594b178b-90bb-405e-a96c-e0bb7b9c7455",
+          "label": "Spacey groove"
         }
       ]
     }
   ],
   "CONTROLS": [
     {
-      "controlId": "d470d018-4aa3-4a55-a09c-c155871f3ca5",
-      "controlName": "New button control",
-      "controlType": "counter",
-      "controlDefaultValues": [
-        0
-      ],
+      "controlId": "7bb8aca4-adba-482b-b289-f0d93995bb90",
+      "controlName": "Stereo",
+      "controlType": "checkbox",
+      "controlDefaultValues": [],
       "controlParameters": {
-        "label": "Click me",
-        "step": 1
+        "options": [
+          {
+            "label": "Only stereo",
+            "value": "c4935f0e-b09f-464f-9e6a-e592419c020b"
+          }
+        ]
       },
       "controlBehaviours": [
         {
-          "behaviourId": "b1acff62-b489-421a-84df-31352ebca610",
+          "behaviourId": "7f94c779-c720-4b57-9f57-8f482d351865",
           "behaviourType": "spread",
           "behaviourParameters": {
             "perDeviceGainAdjust": 1
           }
         },
         {
-          "behaviourId": "8fc0e0f3-62fa-4401-935a-53f58a19bdf5",
+          "behaviourId": "1486688d-98b2-4a6c-a862-c9397520e145",
           "behaviourType": "allowedIf",
           "behaviourParameters": {
             "conditions": [
               {
-                "conditionId": "ed45f976-8805-4105-93fb-62c21cc0b63e",
+                "conditionId": "99332982-7d5e-4c30-91a0-4dcdcfd3c2fc",
                 "property": "session.currentContentId",
                 "operator": "anyOf",
                 "value": [],
                 "invertCondition": true
               },
               {
-                "conditionId": "53767832-84a6-4bee-8300-6f04954c62b1",
+                "conditionId": "a6a4242a-da3d-4c90-bbd1-bdf41ed2ba01",
                 "property": "device.deviceIsMain",
                 "operator": "anyOf",
                 "value": [
@@ -83,12 +175,12 @@
     "type": "cloud-sync",
     "hostname": "cloudsync.virt.ch.bbc.co.uk"
   },
-  "TEXT_TITLE": "Title",
-  "TEXT_SUBTITLE": "Subtitle",
-  "TEXT_INTRODUCTION": "Introduction",
+  "TEXT_TITLE": "Distributed music",
+  "TEXT_SUBTITLE": "",
+  "TEXT_INTRODUCTION": "",
   "TEXT_START_LABEL": "Start new session",
   "TEXT_JOIN_LABEL": "Join existing session",
-  "ACCENT_COLOUR": "#006def",
+  "ACCENT_COLOUR": "#7080ff",
   "DEBUG_UI": true,
   "MDO_COMPRESSOR_RATIO": 2,
   "MDO_COMPRESSOR_THRESHOLD": 0,
